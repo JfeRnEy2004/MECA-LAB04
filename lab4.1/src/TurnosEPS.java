@@ -1,7 +1,27 @@
 import java.util.ArrayList;
+import java.util.Queue;
 import java.util.Scanner;
+import java.util.Timer;
+import javax.swing.JButton;
+import javax.swing.JCheckBox;
+import javax.swing.JComboBox;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
 
 public class TurnosEPS {
+    private final JTextField nombreTxt;
+    private final JTextField edadTxt;
+    private final JComboBox<String> afiliacionCmb;
+    private final JCheckBox embarazoChk;
+    private final JCheckBox limitacionChk;
+    private final JButton crearBtn;
+    private JButton extenderBtn;
+    private JLabel turnoLbl;
+    private JLabel tiempoLbl;
+    private JLabel pendientesLbl;
+    private Queue<Paciente> colaTurnos;
+    private final Timer timer;
+    private int tiempoRestante;
 
     public static void main(String[] args) {
         ArrayList<Paciente> listaTurnos = new ArrayList<Paciente>();
